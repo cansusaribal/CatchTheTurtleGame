@@ -18,7 +18,7 @@ score_turtle = turtle.Turtle()
 score_turtle.hideturtle()
 score_turtle.penup()
 score_turtle.goto(-350, 200)
-score_turtle.write("Skor: 0", align="left", font=("Verdana", 50, "normal"))
+score_turtle.write("Skor: 0", align="left", font=("Times New Roman", 50, "normal"))
 
 timer_turtle = turtle.Turtle()
 timer_turtle.hideturtle()
@@ -31,7 +31,7 @@ time_limit = 60
 
 def update_score():
     score_turtle.clear()
-    score_turtle.write(f"Skor: {score}", align="left", font=("Verdana", 50, "normal"))
+    score_turtle.write(f"Skor: {score}", align="left", font=("Times New Roman", 50, "normal"))
 
 def catch_turtle(x, y):
     global score
@@ -47,7 +47,7 @@ def move_turtle():
 def countdown(time_left):
     if time_left > 0:
         timer_turtle.clear()
-        timer_turtle.write(f"Süre: {time_left}", align="left", font=("Verdana", 50, "normal"))
+        timer_turtle.write(f"Süre: {time_left}", align="left", font=("Times New Roman", 50, "normal"))
         window.ontimer(lambda: countdown(time_left - 1), 1000)
     else:
         end_game()
@@ -56,7 +56,7 @@ def end_game():
     t.hideturtle()
     timer_turtle.clear()
     timer_turtle.goto(0, 0)
-    timer_turtle.write(f"Oyun Bitti! Skorunuz: {score}", align="center", font=("Verdana", 50, "bold"))
+    timer_turtle.write(f"Oyun Bitti! Skorunuz: {score}", align="center", font=("Times New Roman", 50, "bold"))
 
 t.onclick(catch_turtle)
 
